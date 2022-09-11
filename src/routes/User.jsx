@@ -15,7 +15,7 @@ const User = () => {
   // axios get request to get user data
   const getUserData = (userId) => {
     axios
-      .get(`https://stark-fortress-32519.herokuapp.comapi/user/${userId}`)
+      .get(`https://stark-fortress-32519.herokuapp.com/api/user/${userId}`)
       .then((res) => {
         setUserStats(res.data); // set user data to state
       })
