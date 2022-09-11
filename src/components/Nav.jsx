@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { UserContext } from '../helpers/context';
 import { BiCog } from 'react-icons/bi';
@@ -8,11 +8,15 @@ import ThemeToggle from './ThemeToggle';
 const Nav = () => {
   const { user, userKeyboards } = useContext(UserContext);
 
+  const navigate = useNavigate();
+
   // simulate a user user logging out by refreshing the page, which will reset the user context
   function refreshPage() {
     // when logging out, clear local data.
     window.localStorage.clear();
     window.location.reload(false);
+    // send user to home page
+    navigate('/ctt-front-end/');
   }
 
   return (
