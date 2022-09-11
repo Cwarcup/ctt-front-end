@@ -39,7 +39,7 @@ function Login() {
           if (res.status === 200) {
             successfulLogin(res);
             setStatusCode(res.status);
-            navigate('/cthulhu-teaches-typing/');
+            navigate('/ctt-front-end/');
           }
           resolve(res.data);
         })
