@@ -7,12 +7,12 @@ const LayoutWrapper = ({ children }) => {
         <main className="my-auto flex flex-col">{children}</main>
         <footer>
           <div className="dark:hover-text-candle container flex flex-wrap items-center justify-between font-light text-kinda-teal dark:text-pale-gold">
-            <Link to="/" className="flex items-center">
+            <Link to="/ctt-front-end/" className="flex items-center">
               <span className="self-center text-xl hover:text-dark-navy dark:hover:text-candle">
                 HOME
               </span>
             </Link>
-            <Link to="/leaderboard" className="flex items-center">
+            <Link to="/ctt-front-end/leaderboard" className="flex items-center">
               <span className="self-center text-xl hover:text-dark-navy dark:hover:text-candle">
                 LEADERBOARD
               </span>
@@ -20,7 +20,7 @@ const LayoutWrapper = ({ children }) => {
             <ul className="mt-0 flex flex-row p-4">
               <li>
                 <Link
-                  to="/login"
+                  to="/ctt-front-end/login"
                   className="p-0 py-2 pr-4 pl-3 hover:text-dark-navy dark:hover:text-candle"
                   aria-current="login"
                 >
@@ -29,7 +29,7 @@ const LayoutWrapper = ({ children }) => {
               </li>
               <li>
                 <Link
-                  to="/login"
+                  to="/ctt-front-end/login"
                   className="p-0 py-2 pr-4 pl-3 hover:text-dark-navy dark:hover:text-candle"
                   aria-current="login"
                 >
@@ -38,7 +38,7 @@ const LayoutWrapper = ({ children }) => {
               </li>
               <li>
                 <Link
-                  to="/multiplayer"
+                  to="/ctt-front-end/multiplayer"
                   className="p-0 py-2 pr-4 pl-3 hover:text-dark-navy dark:hover:text-candle"
                   aria-current="multiplayer"
                 >

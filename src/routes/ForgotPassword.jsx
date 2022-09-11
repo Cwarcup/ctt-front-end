@@ -86,7 +86,7 @@ const ForgotPassword = () => {
       <p className="mt-3 flex items-center justify-center gap-3 divide-x divide-gray-300 text-center">
         <Link
           className="pl-3 text-sm text-dark-navy decoration-2 hover:text-blood-red hover:underline dark:text-pale-gold"
-          to="/"
+          to="/ctt-front-end/"
         >
           {' '}
           FAQs{' '}
@@ -94,7 +94,7 @@ const ForgotPassword = () => {
         <span className="inline pl-3 text-sm text-dark-navy dark:text-pale-gold">
           Remember your password?
           <Link
-            to="/login"
+            to="/ctt-front-end/login"
             className="font-medium text-blue-600 decoration-2 hover:underline"
             href="#"
           >
@@ -104,7 +104,7 @@ const ForgotPassword = () => {
         </span>
         <Link
           className="pl-3 text-sm text-dark-navy decoration-2 hover:text-blood-red hover:underline dark:text-pale-gold"
-          to="/"
+          to="/ctt-front-end/"
           target="_blank"
         >
           {' '}

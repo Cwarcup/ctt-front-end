@@ -71,7 +71,7 @@ export default function App() {
 
               <LayoutWrapper>
                 <Routes>
-                  <Route path="/" element={<Home />} />
+                  <Route path="/ctt-front-end/" element={<Home />} />
                   <Route path="/multiplayer" element={<Multiplayer />} />
                   <Route path="/login" element={<Login />} />
                   <Route path="/leaderboard" element={<Leaderboard />} />

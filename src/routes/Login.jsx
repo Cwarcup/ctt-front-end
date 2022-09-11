@@ -139,7 +139,7 @@ function Login() {
 
               <div className="text-sm">
                 <Link
-                  to="/forgot-password"
+                  to="/ctt-front-end/forgot-password"
                   className="font-medium text-dark-navy hover:text-kinda-teal dark:text-blood-red dark:hover:text-candle"
                 >
                   Forgot your password?
