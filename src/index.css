@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=Chakra+Petch:wght@300;400;600&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://use.typekit.net/ktn2qhx.css');
+
+
+h1 {
+  font-family: brother-1816, sans-serif;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.logo-text {
+  font-family: brother-1816, sans-serif;
+  text-decoration: none;
+  font-size: 45px;
+}
+
+.logo-drip {
+  font-weight: 900;
+}
+
+.logo-lite {
+  font-weight: 400;
+}
+
+/* may have issue */
+.typing {
+  font-size: 40px;
+  display: flex;
+  white-space: nowrap;
+  font-family: courier-prime, monospace;
+}
+
+.correct {
+  color: #e9b12e;
+}
+
+.mistake {
+  color: #8c3d34;
+}
+
+.shaken {
+  animation: shake 0.4s, turn-red 0.4s;
+}
+
+.timer {
+  font-size: 40px;
+  font-family: brother-1816, sans-serif;
+}
+
+table {
+  font-family: brother-1816, sans-serif;
+  font-weight: 900;
+  /* color: #eedcb2; */
+  text-decoration: none;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #25173a;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  /* background-color: #25173a; */
+  /* idk how to do this */
+  /* TODO */
+}
+
+input {
+  padding: 12px 20px;
+  font-size: 28px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  color: #EEDCB2;
+  background-color: #1C122C;
+  border: none;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-bottom: 2px solid #8C3D34;
+}
+
+input:focus {
+  border-color: #8C3D34;
+}
+
+input::placeholder {
+  opacity: 0.5;
+}
+
+.timer-countdown {
+  color: #8c3d34;
+  animation: shake 0.4s, turn-red 0.4s;
+}
+
+.typing-left {
+  text-align: right;
+  color: #e9b12e;
+  white-space: pre;
+}
+
+.typing-right {
+  text-align: left;
+  white-space: pre;
+}
+
+
+.Modal {
+  /* background-color: rgba(25, 0, 25, 0.9); */
+  margin: auto;
+  margin-top: 100px;
+  height: auto;
+  width: fit-content;
+  display: flex;
+  outline: 0;
+  font-family: brother-1816, sans-serif;
+  font-size: 60px;
+  color: #EEDCB2;
+}
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.Modal button {
+  /* color: #eedcb2; */
+  /* background-color: #8c3d34; */
+  padding: 20px;
+  font-family: brother-1816, sans-serif;
+  font-weight: 900;
+}
+
+.modal-container {
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.modal-header {
+  font-size: 80px;
+}
+
+.testing-info {
+  font-size: 25px;
+  color: antiquewhite;
+}
+
+.navbuttons {
+  color: #eedcb2;
+}
+
+@keyframes shake {
+
+  10%,
+  90% {
+    transform: translate(-1px, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate(2px, 4px);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate(-4px, -7px);
+  }
+
+  40%,
+  60% {
+    transform: translate(4px, 0);
+  }
+}
+
+@keyframes turn-red {
+
+  10%,
+  90% {
+    color: #eedcb2;
+  }
+
+  50% {
+    color: red;
+  }
+}
+
+.main-height {
+  height: 90vh;
+}
