@@ -1,6 +1,6 @@
 {
-  "name": "cthulhu-teaches-typing",
-  "homepage": "https://Cwarcup.github.io/ctt-front-end",
+  "name": "ctt-front-end",
+  "homepage": "https://Cwarcup.github.io/ctt-front-end/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
