@@ -21,8 +21,6 @@ export default function ResultsModal(props) {
 
   const closeModal = function () {
     setUserClosed(true);
-    window.localStorage.setItem('user', JSON.stringify(user));
-    window.location.reload(false);
   };
 
   return (
