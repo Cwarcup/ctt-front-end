@@ -12,28 +12,14 @@ const LayoutWrapper = ({ children }) => {
                 HOME
               </span>
             </Link>
-            <Link to="/ctt-front-end/leaderboard" className="flex items-center">
-              <span className="self-center text-xl hover:text-dark-navy dark:hover:text-candle">
-                LEADERBOARD
-              </span>
-            </Link>
             <ul className="mt-0 flex flex-row p-4">
               <li>
                 <Link
-                  to="/ctt-front-end/login"
+                  to="/ctt-front-end/LEADERBOARD"
                   className="p-0 py-2 pr-4 pl-3 hover:text-dark-navy dark:hover:text-candle"
-                  aria-current="login"
+                  aria-current="LEADERBOARD"
                 >
-                  LOGIN
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/ctt-front-end/login"
-                  className="p-0 py-2 pr-4 pl-3 hover:text-dark-navy dark:hover:text-candle"
-                  aria-current="login"
-                >
-                  SIGNUP
+                  LEADERBOARD
                 </Link>
               </li>
               <li>
