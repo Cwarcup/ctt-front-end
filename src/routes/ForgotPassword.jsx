@@ -46,9 +46,8 @@ const ForgotPassword = () => {
                       type="email"
                       id="email"
                       name="email"
-                      className="peer block w-full rounded-md border border-gray-200 bg-darker-beige bg-gray-50 py-3 px-4 text-sm outline-none ring-offset-1 focus:border-kinda-teal focus:bg-white focus:ring-2 focus:ring-kinda-teal dark:bg-incorrectInput dark:focus:border-blood-red dark:focus:ring-blood-red "
+                      className="peer block w-full rounded-md border border-gray-200 bg-darker-beige py-3 px-4 text-sm outline-none ring-offset-1 focus:border-kinda-teal focus:bg-white focus:ring-2 focus:ring-kinda-teal dark:bg-incorrectInput dark:focus:border-blood-red dark:focus:ring-blood-red "
                       required
-                      aria-describedby="email-error"
                     />
                     <div className="pointer-events-none absolute top-3 right-0 hidden items-center px-3 peer-invalid:flex">
                       <svg

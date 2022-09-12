@@ -15,9 +15,9 @@ const LayoutWrapper = ({ children }) => {
             <ul className="mt-0 flex flex-row p-4">
               <li>
                 <Link
-                  to="/ctt-front-end/LEADERBOARD"
+                  to="/ctt-front-end/leaderboard"
                   className="p-0 py-2 pr-4 pl-3 hover:text-dark-navy dark:hover:text-candle"
-                  aria-current="LEADERBOARD"
+                  aria-current="leaderboard"
                 >
                   LEADERBOARD
                 </Link>
