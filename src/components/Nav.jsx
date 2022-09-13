@@ -16,17 +16,14 @@ const Nav = () => {
     window.localStorage.clear();
     window.location.reload(false);
     // send user to home page
-    navigate('/ctt-front-end/');
+    navigate('/');
   }
 
   return (
     <nav className="rounded px-2 py-2.5 font-normal text-dark-navy dark:text-pale-gold">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
         <div className="logo-text text-dark-navy dark:text-pale-gold">
-          <Link
-            to="/ctt-front-end/"
-            className="flex items-center hover:text-kinda-teal dark:hover:text-candle"
-          >
+          <Link to="/" className="flex items-center hover:text-kinda-teal dark:hover:text-candle">
             <img src="./images/logo.png" className="mr-3 h-20 sm:h-20" alt="logo" />
             <span className="logo-drip">CTHULHU</span>{' '}
             <span className="logo-lite">&nbsp;TEACHES TYPING</span>
@@ -39,7 +36,7 @@ const Nav = () => {
 
               <li>
                 <Link
-                  to="/ctt-front-end/user"
+                  to="/user"
                   aria-current="User Settings"
                   className="mx-2 flex gap-2 hover:text-kinda-teal dark:hover:text-blood-red"
                 >
@@ -49,7 +46,7 @@ const Nav = () => {
               </li>
               <li>
                 <Link
-                  to="/ctt-front-end/"
+                  to="/"
                   className="mx-3 rounded-lg bg-darker-beige py-1 px-6 dark:bg-pale-gold dark:text-cosmic-purple"
                   aria-current="logout"
                   onClick={refreshPage}
@@ -62,7 +59,7 @@ const Nav = () => {
             <>
               <li>
                 <Link
-                  to="/ctt-front-end/login"
+                  to="/login"
                   className="mx-3 rounded-lg bg-darker-beige p-0 py-1 px-6 text-lg shadow-lg hover:bg-kinda-teal  dark:bg-pale-gold dark:text-cosmic-purple dark:hover:bg-gold-hover"
                   aria-current="login"
                 >
@@ -71,7 +68,7 @@ const Nav = () => {
               </li>
               <li>
                 <Link
-                  to="/ctt-front-end/login"
+                  to="/login"
                   className="mx-3 rounded-lg bg-darker-beige p-0 py-1 px-6 text-lg shadow-lg hover:bg-kinda-teal dark:bg-pale-gold dark:text-cosmic-purple dark:hover:bg-gold-hover"
                   aria-current="login"
                 >

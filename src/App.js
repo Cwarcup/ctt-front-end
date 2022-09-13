@@ -75,12 +75,12 @@ export default function App() {
 
                 <LayoutWrapper>
                   <Routes>
-                    <Route path="/ctt-front-end/" element={<Home />} />
-                    <Route path="/ctt-front-end/multiplayer" element={<Multiplayer />} />
-                    <Route path="/ctt-front-end/login" element={<Login />} />
-                    <Route path="/ctt-front-end/leaderboard" element={<Leaderboard />} />
-                    <Route path="/ctt-front-end/user" element={<User />} />
-                    <Route path="/ctt-front-end/forgot-password" element={<ForgotPassword />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/multiplayer" element={<Multiplayer />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/leaderboard" element={<Leaderboard />} />
+                    <Route path="/user" element={<User />} />
+                    <Route path="/forgot-password" element={<ForgotPassword />} />
                   </Routes>
                 </LayoutWrapper>
               </div>

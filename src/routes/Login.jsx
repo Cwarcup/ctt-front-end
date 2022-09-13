@@ -39,7 +39,7 @@ function Login() {
           if (res.status === 200) {
             successfulLogin(res);
             setStatusCode(res.status);
-            navigate('/ctt-front-end/');
+            navigate('/');
           }
           resolve(res.data);
         })
@@ -139,7 +139,7 @@ function Login() {
 
               <div className="text-sm">
                 <Link
-                  to="/ctt-front-end/forgot-password"
+                  to="/forgot-password"
                   className="font-medium text-dark-navy hover:text-kinda-teal dark:text-blood-red dark:hover:text-candle"
                 >
                   Forgot your password?

@@ -56,7 +56,7 @@ export default function ResultsModal(props) {
               </div>
               <Link
                 className="font-gold-hover mt-3 transform rounded-lg text-lg text-dark-navy dark:text-blood-red"
-                to="/ctt-front-end/user"
+                to="/user"
               >
                 See all results{' '}
                 <span className="text-darker-beige underline dark:text-link-green dark:hover:text-pale-gold">
