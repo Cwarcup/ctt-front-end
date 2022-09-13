@@ -1,39 +1,42 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { UserContext } from '../helpers/context';
 import { BiCog } from 'react-icons/bi';
 import KeyboardDropdown from './KeyboardDropdown';
 import ThemeToggle from './ThemeToggle';
+import DisplayKeyboard from './DisplayKeyboard';
 
 const Nav = () => {
   const { user, userKeyboards } = useContext(UserContext);
 
-  const navigate = useNavigate();
-
   // simulate a user user logging out by refreshing the page, which will reset the user context
-  function refreshPage() {
+  const refreshPage = function () {
     // when logging out, clear local data.
     window.localStorage.clear();
     window.location.reload(false);
-    // send user to home page
-    navigate('/');
-  }
+    
+  };
 
   return (
-    <nav className="rounded px-2 py-2.5 font-normal text-dark-navy dark:text-pale-gold">
+    <nav className="rounded px-2 py-2.5 text-dark-navy dark:text-pale-gold">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
         <div className="logo-text text-dark-navy dark:text-pale-gold">
-          <Link to="/" className="flex items-center hover:text-kinda-teal dark:hover:text-candle">
+          <Link
+            to="/"
+            className="flex items-center font-sans hover:text-kinda-teal dark:hover:text-candle"
+          >
             <img src="./images/logo.png" className="mr-3 h-20 sm:h-20" alt="logo" />
-            <span className="logo-drip">CTHULHU</span>{' '}
-            <span className="logo-lite">&nbsp;TEACHES TYPING</span>
+            <div className="font-brother-1816 flex flex-col text-3xl">
+              <span className="font-black tracking-huge">CTHULHU</span>
+              <span className="font-extralight">TEACHES TYPING</span>
+            </div>
           </Link>
         </div>
         <ul className="flex items-center  gap-2 font-light">
           {user && user !== 'null' ? (
             <>
               {user && userKeyboards ? <KeyboardDropdown /> : null}
-
+              {user && userKeyboards ? <DisplayKeyboard /> : null}
               <li>
                 <Link
                   to="/user"
@@ -41,7 +44,7 @@ const Nav = () => {
                   className="mx-2 flex gap-2 hover:text-kinda-teal dark:hover:text-blood-red"
                 >
                   <BiCog className="text-2xl" />
-                  <span>{user.name}</span>
+                  <span>{user.name.split(' ')[0]}</span>
                 </Link>
               </li>
               <li>

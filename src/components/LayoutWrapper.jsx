@@ -6,7 +6,7 @@ const LayoutWrapper = ({ children }) => {
       <div className="main-height flex flex-col justify-between font-sans">
         <main className="my-auto flex flex-col">{children}</main>
         <footer>
-          <div className="dark:hover-text-candle container flex flex-wrap items-center justify-between font-light text-kinda-teal dark:text-pale-gold">
+          <div className="dark:hover-text-candle container -my-5 flex flex-wrap items-center justify-between font-light text-kinda-teal dark:text-pale-gold">
             <Link to="/" className="flex items-center">
               <span className="self-center text-xl hover:text-dark-navy dark:hover:text-candle">
                 HOME
@@ -17,7 +17,6 @@ const LayoutWrapper = ({ children }) => {
                 <Link
                   to="/leaderboard"
                   className="p-0 py-2 pr-4 pl-3 hover:text-dark-navy dark:hover:text-candle"
-                  aria-current="leaderboard"
                 >
                   LEADERBOARD
                 </Link>
