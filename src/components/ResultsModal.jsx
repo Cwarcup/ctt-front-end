@@ -55,14 +55,13 @@ export default function ResultsModal(props) {
               <p>ACCURACY: {props.accuracy}%</p>
               <p>DIFFICULTY: {props.difficulty.toUpperCase()}</p>
             </div>
-
             {user ? (
-              <div>
-                <div className="font-gold-hover mt-1 transform rounded-lg text-lg text-dark-navy dark:text-blood-red">
+              <>
+                <div className="font-gold-hover mt-10 transform rounded-lg text-lg text-dark-navy dark:text-blood-red">
                   Results has been automatically added to your keyboard stats!
                 </div>
                 <Link
-                  className="font-gold-hover transform rounded-lg text-lg text-dark-navy dark:text-blood-red"
+                  className="font-gold-hover mt-3 transform rounded-lg text-lg text-dark-navy dark:text-blood-red"
                   to="/user"
                 >
                   See all results{' '}
@@ -70,11 +69,41 @@ export default function ResultsModal(props) {
                     here
                   </span>
                 </Link>
-              </div>
-            ) : (
-              <p className="guest-submit">Results have been submitted!</p>
-            )}
+              </>
+            ) : null}
           </div>
+
+          {!submitted && !user ? (
+            <div className="guest-submit flex flex-col justify-center">
+              <p className="guest-submit">Want to submit your results?</p>
+              <input
+                className="guest-submit"
+                type="text"
+                name="Name"
+                placeholder="Enter a username"
+                onChange={(event) => {
+                  setGuestName(event.target.value);
+                }}
+              />
+              <button
+                className="guest-submit mt-5 transform rounded-lg bg-darker-beige p-2 px-2 text-dark-navy shadow-lg hover:scale-105 hover:bg-kinda-teal dark:bg-blood-red dark:text-pale-gold dark:hover:bg-blood-red-hover"
+                onClick={() => {
+                  submitGuestScore(
+                    props.wpm,
+                    props.accuracy,
+                    guestName,
+                    currentKeyboard,
+                    props.difficulty
+                  );
+                  setSubmitted(true);
+                }}
+              >
+                Submit
+              </button>
+            </div>
+          ) : user ? null : (
+            <p className="guest-submit">Results have been submitted!</p>
+          )}
         </div>
       </Modal>
     </>
