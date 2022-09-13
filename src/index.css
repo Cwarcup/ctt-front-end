@@ -142,10 +142,10 @@ input::placeholder {
 }
 
 .modal-container {
-  margin: 100px;
+  padding: 0 20px 100px 100px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
 }
 
@@ -160,6 +160,21 @@ input::placeholder {
 
 .navbuttons {
   color: #eedcb2;
+}
+
+.display-keyboard {
+  display: grid;
+  width: 100%;
+}
+
+.keyboard-bg,
+.keyboard-keys {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.keyboard-keys {
+  z-index: 5;
 }
 
 @keyframes shake {

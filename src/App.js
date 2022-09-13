@@ -12,6 +12,7 @@ import LayoutWrapper from './components/LayoutWrapper';
 import './App.css';
 import { uniqueNamesGenerator, adjectives, animals } from 'unique-names-generator';
 import ForgotPassword from './routes/ForgotPassword';
+import CreateKeyboard from './routes/CreateKeyboard';
 import RandomWords from './helpers/RandomWords';
 
 //!! toggle dark mode
@@ -21,7 +22,7 @@ import { ThemeProvider } from './helpers/ThemeContext';
 export default function App() {
   const [user, setUser] = useState(); // user state, set at login
   const [userKeyboards, setUserKeyboards] = useState(); // array of keyboards for the user, set at login
-  const [currentKeyboard, setCurrentKeyboard] = useState(0); // this is the id of the current keyboard, set when user goes to TypingField
+  const [currentKeyboard, setCurrentKeyboard] = useState(); // this is the id of the current keyboard, set when user goes to TypingField
   const [codeEntered, setCodeEntered] = useState();
   const [userScore, setUserScore] = useState(); // this is the score of the user, gets set when the user finishes typing
   const [guestName, setGuestName] = useState(
@@ -81,6 +82,7 @@ export default function App() {
                     <Route path="/leaderboard" element={<Leaderboard />} />
                     <Route path="/user" element={<User />} />
                     <Route path="/forgot-password" element={<ForgotPassword />} />
+                    <Route path="/create-keyboard" element={<CreateKeyboard />} />
                   </Routes>
                 </LayoutWrapper>
               </div>
