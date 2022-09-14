@@ -23,7 +23,12 @@ export default function TypingField() {
   const { user } = useContext(UserContext); // use context to get user
 
   // timer functionality
-  let initialTimer = 15; // use constant for initial timer and pass to counter--needed for WPM
+  let initialTimer = 60; // use constant for initial timer and pass to counter--needed for WPM
+
+  if (user && user.name) {
+    initialTimer = 15;
+  }
+
   const [counter, setCounter] = useState(initialTimer);
   const [started, setStarted] = useState(false);
   const [soundStarted, setSoundStarted] = useState(false); // sound for countdown
@@ -105,7 +110,6 @@ export default function TypingField() {
     setIsComplete(true);
   };
 
-  console.log('user', user);
   // --- UPDATES WORDS SECTIONS
   useEffect(() => {
     setFullDivStyle((prev) => {
