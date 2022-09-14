@@ -2,7 +2,6 @@ import { UserContext } from '../helpers/context';
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-
 // component for the TypingField to display the current keyboard and all keyboards for the user
 const KeyboardDropdown = () => {
   const navigate = useNavigate();
@@ -15,7 +14,6 @@ const KeyboardDropdown = () => {
   if (currentKeyboard === undefined || currentKeyboard === null) {
     setCurrentKeyboard(userKeyboards[0].id);
   }
-  console.log(userKeyboards);
 
   // set the setCurrentKeyboard state to the keyboard that was clicked
   const handleKeyboardClick = (keyboard) => {

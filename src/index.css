@@ -183,6 +183,27 @@ input::placeholder {
   z-index: 5;
 }
 
+.code-hidden {
+  visibility: hidden;
+}
+
+.code-hidden {
+  visibility: hidden;
+}
+
+.code-visible {
+  font-family: metalista-web, serif;
+  text-align: center;
+  font-size: 15px;
+  animation: konami 3s;
+  color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 50vh;
+  left: 40vw;
+  right: auto;
+  z-index: 99;
+}
+
 @keyframes shake {
 
   10%,
