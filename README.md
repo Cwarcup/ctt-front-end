@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/maxwellsquared/cthulhu-teaches-typing">
+  <a href="https://www.cthulhuteachestyping.com/">
     <img src="./public/images/cthulhu.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -24,6 +24,8 @@ Cthulhu Teaches Typing is a typing game for learning to type. It is a work in pr
 Our goal was to target the keyboard enthusiast market with a minimal, yet customizable application to track and compare typing statistics. We also wanted to create a fun and engaging typing game that would help users learn to type faster and more accurately.
 
 We hope you enjoy it! 
+
+[Click here to try it out!](https://www.cthulhuteachestyping.com/)
 
 ## Screenshots
 <div align="center">
