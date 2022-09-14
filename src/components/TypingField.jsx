@@ -2,7 +2,7 @@ import { useState, useEffect, useContext } from 'react';
 import RandomWords from '../helpers/RandomWords';
 import difficultRandomWords from '../helpers/difficultRandomWords';
 import ResultsModal from './ResultsModal';
-import { CodeContext, randomWordsContext } from '../helpers/context';
+import { CodeContext, randomWordsContext, UserContext } from '../helpers/context';
 import SubmittedWords from './SubmittedWords';
 import DifficultyDropdown from './DifficultyDropdown';
 import codeRandomWords from '../helpers/codeRandomWords';
@@ -20,9 +20,10 @@ const splat = new Howl({ src: './sounds/splat.mp3' });
 export default function TypingField() {
   const { codeEntered, setCodeEntered } = useContext(CodeContext);
   const { randomWords, setRandomWords } = useContext(randomWordsContext); // use context to get randomWords
+  const { user } = useContext(UserContext); // use context to get user
 
   // timer functionality
-  const initialTimer = 60; // use constant for initial timer and pass to counter--needed for WPM
+  let initialTimer = 15; // use constant for initial timer and pass to counter--needed for WPM
   const [counter, setCounter] = useState(initialTimer);
   const [started, setStarted] = useState(false);
   const [soundStarted, setSoundStarted] = useState(false); // sound for countdown
@@ -104,6 +105,7 @@ export default function TypingField() {
     setIsComplete(true);
   };
 
+  console.log('user', user);
   // --- UPDATES WORDS SECTIONS
   useEffect(() => {
     setFullDivStyle((prev) => {
