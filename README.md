@@ -9,7 +9,7 @@
 <h3 align="center">Cthulhu Teaches Typing</h3>
 
   <p align="center">
-    A typing game for learning to type in the style of the Cthulhu Mythos.
+    Clean, simple, and fun typing practice
     <br />
   </p>
 </div>
@@ -25,6 +25,13 @@ Our goal was to target the keyboard enthusiast market with a minimal, yet custom
 
 We hope you enjoy it! 
 
+## Screenshots
+<div align="center">
+  <img src="https://media2.giphy.com/media/r95N2PBaOXaOifI1mh/giphy.gif?cid=790b761129a024ece40054e71c97e5415d59fb7225e747ee&rid=giphy.gif&ct=g" alt="homepage">
+  <img src="https://media1.giphy.com/media/JTI6M0d3s1w1hLkkFx/giphy.gif?cid=790b7611ffa3ba30af1975f667b229717902c1a8b184fa7f&rid=giphy.gif&ct=g" alt="user page">
+  <img src="https://media0.giphy.com/media/n5udfH3CLSwPhKnOkq/giphy.gif?cid=790b7611967ea3f5cbd09272d5891513da94f00659e83748&rid=giphy.gif&ct=g" alt="dark/light theme">
+
+</div>
 ### Built With
 
 * [![React][React.js]][React-url]
