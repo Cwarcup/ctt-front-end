@@ -9,13 +9,13 @@ import codeRandomWords from '../helpers/codeRandomWords';
 import codeLanguageRandom from '../helpers/codeLanguageRandom';
 import binaryCode from '../helpers/binaryCode';
 import zalgoText from '../helpers/zalgoText';
-import {Howl, Howler} from 'howler';
+import { Howl, Howler } from 'howler';
 
 // setup howler sounds
-const keyStroke = new Howl({src: './sounds/thwock.wav', volume: 0.1});
-const countdown = new Howl({src: './sounds/countdown-tick.wav', rate: 1.1});
-const bell = new Howl({src: './sounds/bell-tolling.mp3'});
-const splat = new Howl({src: './sounds/splat.mp3'});
+const keyStroke = new Howl({ src: './sounds/thwock.wav', volume: 0.1 });
+const countdown = new Howl({ src: './sounds/countdown-tick.wav', rate: 1.1 });
+const bell = new Howl({ src: './sounds/bell-tolling.mp3' });
+const splat = new Howl({ src: './sounds/splat.mp3' });
 
 export default function TypingField() {
   const { codeEntered, setCodeEntered } = useContext(CodeContext);
@@ -26,7 +26,6 @@ export default function TypingField() {
   const [counter, setCounter] = useState(initialTimer);
   const [started, setStarted] = useState(false);
   const [soundStarted, setSoundStarted] = useState(false); // sound for countdown
-
 
   // text to be typed
   let initialRandomWords = randomWords.toString(); // converts array to string
@@ -89,14 +88,13 @@ export default function TypingField() {
     }
   }, [counter, started]);
 
-    // setup countdown noise
-    const playCountdown = function() {
-      let localTruth = false;
-      if (soundStarted) localTruth = true;
-      if (!soundStarted) countdown.play();
-      setSoundStarted(true);
-    };
-  
+  // setup countdown noise
+  const playCountdown = function () {
+    let localTruth = false;
+    if (soundStarted) localTruth = true;
+    if (!soundStarted) countdown.play();
+    setSoundStarted(true);
+  };
 
   // ---- GAME OVER ----
   const gameOver = function () {
@@ -287,10 +285,13 @@ export default function TypingField() {
 
   return (
     <>
-      <ResultsModal difficulty={difficulty} gameOver={isComplete} wpm={wordsPerMinute} accuracy={accuracy} />
-      <div className={codeDisplay}>
-        FORBIDDEN KNOWLEDGE UNLOCKED
-      </div>
+      <ResultsModal
+        difficulty={difficulty}
+        gameOver={isComplete}
+        wpm={wordsPerMinute}
+        accuracy={accuracy}
+      />
+      <div className={codeDisplay}>FORBIDDEN KNOWLEDGE UNLOCKED</div>
       <div className="input-container mt-20 mb-10">
         <div className={divClassName} style={fullDivStyle}>
           <div className="typing-left">

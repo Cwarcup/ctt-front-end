@@ -7,7 +7,6 @@ const SubmitUserScore = ({ wpm, accuracy }) => {
 
   const [buttonText, setButtonText] = useState('SUBMIT SCORE');
 
-  console.log('currentKeyboard: ', currentKeyboard);
 
   const data = {
     wpm: wpm,
