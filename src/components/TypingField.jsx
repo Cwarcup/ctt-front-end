@@ -23,7 +23,7 @@ export default function TypingField() {
   const { user } = useContext(UserContext); // use context to get user
 
   // timer functionality
-  const initialTimer = 15; // use constant for initial timer and pass to counter--needed for WPM
+  const initialTimer = 60; // use constant for initial timer and pass to counter--needed for WPM
 
   const [counter, setCounter] = useState(initialTimer);
   const [started, setStarted] = useState(false);
